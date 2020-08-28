@@ -1,0 +1,16 @@
+<block wx:if="{{$taroCompReady}}">
+    <scroll-view class="crop-layout" scroll-y="{{hideBox ? false : true}}" scroll-top="{{scrollTop}}">
+        <image id="image" class="image" src="{{imgSrc}}" style="{{'' + clipStyle + imgStyle + imgStyle1}}" mode="widthFix"></image>
+        <image id="image_mask" class="mask-image" src="{{imgSrc}}" style="{{anonymousState__temp}}" mode="widthFix"></image>
+        <view class="stage" id="stage" style="{{'width:' + stageWidth + 'px;height:' + stageHeight + 'px;left:' + stageLeft + 'px;top:' + (isHeightLarge ? 0 : stageTop) + 'px;'}}" bindtouchstart="fnTouchStart" catchtouchmove="fnTouchMove" catchtouchend="fnTouchEnd" catchtouchcancel="fnTouchCancel">
+            <view id="box" class="box" style="{{'width:' + boxWidth + 'px;height:' + boxHeight + 'px;left:' + boxLeft + 'px;top:' + boxTop + 'px;' + boxHideStyle}}">
+                <view id="lt" class="lt"></view>
+                <view id="lb" class="lb"></view>
+                <view id="rt" class="rt"></view>
+                <view id="rb" class="rb"></view>
+                <view class="icon-enter" style="{{anonymousState__temp2}}" catchtap="onEnterCrop"></view>
+            </view>
+        </view>
+        <canvas canvas-id="cropCanvas" style="{{'height:' + canvasHeight + 'px;width:' + canvasWidth + 'px;position:fixed;background-color:red;left:5000rpx;'}}"></canvas>
+    </scroll-view>
+</block>

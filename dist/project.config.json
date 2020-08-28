@@ -1,0 +1,15 @@
+{
+	"projectname": "myApp",
+	"description": "cropper 组件",
+	"appid": "wx490a7b91b54a6340",
+	"setting": {
+		"urlCheck": true,
+		"es6": false,
+		"postcss": false,
+		"minified": false
+	},
+	"compileType": "miniprogram",
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {}
+}
